@@ -24,9 +24,10 @@ public class Myteck_Login {
     @Test
     public void loginToMytek() throws InterruptedException {
         driver.navigate().to("https://www.mytek.tn/");
+        Thread.sleep(6000);
         driver.findElement(By.className("authorization-link")).click();
         driver.findElement(By.xpath("//input[@id=\"email\"]")).sendKeys("ramirbehi92@gmail.com");
-        driver.findElement(By.xpath("//input[@id=\"pass\"]")).sendKeys("19921920Mytek");
+        driver.findElement(By.xpath("//input[@id=\"password\"]")).sendKeys("19921920Mytek");
         Thread.sleep(6000);
         driver.findElement(By.id("send2")).click();
     }
